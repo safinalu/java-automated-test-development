@@ -75,7 +75,7 @@ git clone --branch master --depth 1 https://github.com/ACCOUNT/java-automated-te
 - [ ] Test = fixed flow
 - [ ] Test case = component specification
 ### Hands-on
-- [ ] Given legacy codebase with Client and SavingAccount domain types
+- [ ] Given legacy codebase with Client and SavingAccount com.acme.banking.dbo.domain types
 - [ ] When developers add guard clauses for creating Client and SavingAccount
 - [ ] And cover these components with maintainable autotests
 - [ ] Then public code review should state its maintainability
@@ -93,7 +93,7 @@ git clone --branch master --depth 1 https://github.com/ACCOUNT/java-automated-te
 - [ ] Add coverage tool dependency
 - [ ] Project test coverage reports
 ### Hands-on
-- [ ] Given legacy codebase with Client and SavingAccount domain types
+- [ ] Given legacy codebase with Client and SavingAccount com.acme.banking.dbo.domain types
 - [ ] And added covering test suite
 - [ ] When developers analyse coverage reprts
 - [ ] And develop new tests
@@ -118,7 +118,7 @@ git clone --branch master --depth 1 https://github.com/ACCOUNT/java-automated-te
 - [ ] [Categories](https://github.com/junit-team/junit4/wiki/Categories)
 - [ ] Build tool support for scoped tests run
 ### Hands-on
-- [ ] Given legacy codebase with Client and SavingAccount domain types
+- [ ] Given legacy codebase with Client and SavingAccount com.acme.banking.dbo.domain types
 - [ ] When developers add consistency rules for linking Client and SavingAccount
 - [ ] And cover these components with maintainable autotests
 - [ ] Then coverage for theses components should be 100%
@@ -182,6 +182,8 @@ git clone --branch master --depth 1 https://github.com/ACCOUNT/java-automated-te
 - [ ] When developers analyse and refactor test codebase for maintainability
 - [ ] Then cross-team code review should state for tests maintainability
 
+## TDD intro (2)
+
 ## How cover web UI? (2.5)
 ### HTML overview
 - [ ] HTML structure
@@ -208,5 +210,11 @@ git clone --branch master --depth 1 https://github.com/ACCOUNT/java-automated-te
 - [ ] When developers cover main flow with UI test
 - [ ] Then cross-team code review should state for tests maintainability
 
+## Cucumber intro (1.5)
+## Allure intro (1)
+
 ## Buffer (2)
 - [ ] Daily retrospectives
+
+## Webinar recordings
+- [12.05](https://us02web.zoom.us/rec/share/58pZI5PB_FpOa53Pt0P5AukKLLy5aaa8hCcbqfcNyHifs4MnaVroY9fhhCgIeLw)
