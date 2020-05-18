@@ -60,12 +60,7 @@ public class SavingAccountTest {
         //endregion
 
         //region then
-        assertThat(exception,
-                CoreMatchers.allOf(
-                        CoreMatchers.notNullValue(),
-                        instanceOf(IllegalArgumentException.class)
-                ));
-        assertThat(exception.getMessage(), CoreMatchers.equalTo("Id must not be null"));
+        assertThatIllegalArgumentExceptionWithMessage(exception, "Id must not be null");
         //endregion
     }
 
@@ -82,12 +77,7 @@ public class SavingAccountTest {
         //endregion
 
         //region then
-        assertThat(exception,
-                CoreMatchers.allOf(
-                        CoreMatchers.notNullValue(),
-                        instanceOf(IllegalArgumentException.class)
-                ));
-        assertThat(exception.getMessage(), CoreMatchers.equalTo("Client must not be null"));
+        assertThatIllegalArgumentExceptionWithMessage(exception, "Client must not be null");
         //endregion
     }
 
@@ -104,12 +94,7 @@ public class SavingAccountTest {
         //endregion
 
         //region then
-        assertThat(exception,
-                CoreMatchers.allOf(
-                        CoreMatchers.notNullValue(),
-                        instanceOf(IllegalArgumentException.class)
-                ));
-        assertThat(exception.getMessage(), CoreMatchers.equalTo("Amount must be a non-negative value"));
+        assertThatIllegalArgumentExceptionWithMessage(exception, "Amount must be a non-negative value");
         //endregion
     }
 
@@ -121,5 +106,14 @@ public class SavingAccountTest {
             exception = e;
         }
         return exception;
+    }
+
+    private void assertThatIllegalArgumentExceptionWithMessage(Exception exception, String s) {
+        assertThat(exception,
+                CoreMatchers.allOf(
+                        CoreMatchers.notNullValue(),
+                        instanceOf(IllegalArgumentException.class)
+                ));
+        assertThat(exception.getMessage(), CoreMatchers.equalTo(s));
     }
 }

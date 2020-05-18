@@ -49,12 +49,7 @@ public class ClientTest {
         //endregion
 
         //region then
-        assertThat(exception,
-                allOf(
-                        notNullValue(),
-                        instanceOf(IllegalArgumentException.class)
-                ));
-        assertThat(exception.getMessage(), equalTo("Id must not be null"));
+        assertThatIllegalArgumentExceptionWithMessage(exception, "Id must not be null");
         //endregion
     }
 
@@ -70,12 +65,7 @@ public class ClientTest {
         //endregion
 
         //region then
-        assertThat(exception,
-                allOf(
-                        notNullValue(),
-                        instanceOf(IllegalArgumentException.class)
-                ));
-        assertThat(exception.getMessage(), equalTo("Name must not be null"));
+        assertThatIllegalArgumentExceptionWithMessage(exception, "Name must not be null");
         //endregion
     }
 
@@ -87,5 +77,14 @@ public class ClientTest {
             exception = e;
         }
         return exception;
+    }
+
+    private void assertThatIllegalArgumentExceptionWithMessage(Exception exception, String s) {
+        assertThat(exception,
+                allOf(
+                        notNullValue(),
+                        instanceOf(IllegalArgumentException.class)
+                ));
+        assertThat(exception.getMessage(), equalTo(s));
     }
 }
