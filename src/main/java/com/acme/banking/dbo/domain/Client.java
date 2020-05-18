@@ -2,6 +2,7 @@ package com.acme.banking.dbo.domain;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Objects;
 import java.util.UUID;
 
 public class Client {
@@ -10,6 +11,8 @@ public class Client {
     private Collection<UUID> accountIds = new ArrayList<>(); //TODO
 
     public Client(UUID id, String name) {
+        if (id == null) throw new IllegalArgumentException("Id must not be null");
+        if (name == null) throw new IllegalArgumentException("Name must not be null");
         this.id = id;
         this.name = name;
     }
